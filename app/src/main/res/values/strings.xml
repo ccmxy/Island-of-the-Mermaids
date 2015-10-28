@@ -4,4 +4,6 @@
     <string name="title_activity_name">NameActivity</string>
     <string name="title_activity_items_list">ItemsListActivity</string>
     <string name="title_activity_twisty">TwistyActivity</string>
+    <string name="title_activity_lagoon">LagoonActivity</string>
+    <string name="title_activity_dungeon">DungeonActivity</string>
 </resources>

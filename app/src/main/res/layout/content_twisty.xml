@@ -53,8 +53,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add item to inventory"
-        android:id="@+id/takeItem"
+        android:text="Follow the moaning off to the left"
+        android:id="@+id/followMoaning"
         android:clickable="true"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/nextLagoon" />
@@ -67,7 +67,7 @@
         android:background="#4169E1"
         android:textColor="@android:color/white"
         android:layout_marginTop="37dp"
-        android:layout_below="@+id/takeItem"
+        android:layout_below="@+id/followMoaning"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
