@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mTakeItem = (TextView) findViewById(R.id.takeItem);
-        mNextRoom = (TextView) findViewById(R.id.nextRoom);
+        mNextRoom = (TextView) findViewById(R.id.nextLagoon);
         mActionsRemaining = (TextView) findViewById(R.id.actionsRemaining);
         mPreferences = getApplicationContext().getSharedPreferences("TheAdventure", Context.MODE_PRIVATE);
 
@@ -68,16 +68,16 @@ public class MainActivity extends AppCompatActivity {
                 mTakeItem.setVisibility(View.GONE);
             }
         });
-        /*
+
         mNextRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent inten = new Intent(MainActivity.this, )
-
+                Intent intent = new Intent(MainActivity.this, TwistyActivity.class);
+                startActivity(intent);
             }
 
         });
-        */
+
     }
 
 

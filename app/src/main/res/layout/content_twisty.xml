@@ -7,37 +7,44 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+    tools:showIn="@layout/activity_twisty"
+    tools:context="com.example.colleenminor.theadventure.ui.TwistyActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yikes-- this is a frightening hallway! I hope you brought the candle. The noise is getting louder! It sounds like a brook? Interesting... and now you also hear you also hear another noise. Off to the right, it sounds like someone... moaning in pain?"
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/opening" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="You have just woken up in this room and have no idea where you are. The room is dimly lit and there is a candle next to you. You hear a strange noise coming from a room off the the left. "
-        android:id="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:src="@drawable/twisty"
+        android:cropToPadding="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="167dp"
+        android:layout_below="@+id/textView"
+        android:paddingBottom="14sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="What do you do?"
         android:id="@+id/textView2"
-        android:layout_alignBottom="@+id/imageView"
+        android:layout_above="@+id/nextLagoon"
         android:layout_toRightOf="@+id/actionsRemaining"
         android:layout_toEndOf="@+id/actionsRemaining"
-        android:layout_marginBottom="49dp" />
+        android:paddingTop="8sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Follow the strange noise"
+        android:text="Follow the water noises to the left"
         android:id="@+id/nextLagoon"
         android:clickable="true"
         android:layout_alignBottom="@+id/imageView"
@@ -48,10 +55,9 @@
         android:layout_height="wrap_content"
         android:text="Add item to inventory"
         android:id="@+id/takeItem"
-        android:layout_below="@+id/nextLagoon"
-        android:layout_centerHorizontal="true"
         android:clickable="true"
-        android:layout_marginTop="6sp" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/nextLagoon" />
 
     <TextView
         android:layout_width="wrap_content"
