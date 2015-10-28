@@ -7,7 +7,118 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_lagoon"
-    tools:context="com.example.colleenminor.theadventure.ui.LagoonActivity">
+    tools:showIn="@layout/activity_lagoon" tools:context=".LagoonActivity">
 
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/lagoon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oh my-- it is lovely out here!"
+        android:id="@+id/textView"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What do you do?"
+        android:id="@+id/textView2"
+            android:layout_above="@+id/runIntoLagoon"
+            android:layout_toRightOf="@+id/actionsRemaining"
+            android:layout_toEndOf="@+id/actionsRemaining" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run straight into the lagoon. Weeee!"
+        android:id="@+id/runIntoLagoon"
+        android:clickable="true"
+            android:layout_above="@+id/pickUpShells"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick up some shells"
+        android:id="@+id/pickUpShells"
+        android:clickable="true"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actions Remaning: 2"
+        android:id="@+id/actionsRemaining"
+        android:background="#4169E1"
+        android:textColor="@android:color/white"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 </RelativeLayout>
+
+<!--<ImageView-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:id="@+id/imageView"-->
+<!--android:src="@drawable/lagoon"-->
+<!--android:layout_alignParentTop="true"-->
+<!--android:layout_alignParentLeft="true"-->
+<!--android:layout_alignParentStart="true" />-->
+
+<!--<TextView-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="Oh my&#45;&#45; it is lovely out here!"-->
+<!--android:id="@+id/textView"-->
+<!--android:layout_marginTop="37dp"-->
+<!--android:layout_alignTop="@+id/imageView"-->
+<!--android:layout_centerHorizontal="true" />-->
+
+<!--<TextView-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="What do you do?"-->
+<!--android:id="@+id/textView2"-->
+<!--android:layout_toRightOf="@+id/actionsRemaining"-->
+<!--android:layout_toEndOf="@+id/actionsRemaining"-->
+<!--android:layout_above="@+id/nextLagoon" />-->
+
+<!--<TextView-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="Follow the strange noise"-->
+<!--android:id="@+id/nextLagoon"-->
+<!--android:clickable="true"-->
+<!--android:layout_centerHorizontal="true"-->
+<!--android:layout_above="@+id/followMoaning" />-->
+
+<!--<TextView-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="Add item to inventory"-->
+<!--android:id="@+id/followMoaning"-->
+<!--android:clickable="true"-->
+<!--android:layout_alignBottom="@+id/imageView"-->
+<!--android:layout_alignLeft="@+id/nextLagoon"-->
+<!--android:layout_alignStart="@+id/nextLagoon" />-->
+
+<!--<TextView-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="Actions Remaning: 2"-->
+<!--android:id="@+id/actionsRemaining"-->
+<!--android:background="#4169E1"-->
+<!--android:textColor="@android:color/white"-->
+<!--android:layout_marginTop="37dp"-->
+<!--android:layout_below="@+id/followMoaning"-->
+<!--android:layout_alignParentLeft="true"-->
+<!--android:layout_alignParentStart="true" />-->

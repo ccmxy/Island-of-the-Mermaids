@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:src="@drawable/twisty"
+        android:src="@drawable/scarytwisty"
         android:cropToPadding="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -36,28 +36,40 @@
         android:layout_height="wrap_content"
         android:text="What do you do?"
         android:id="@+id/textView2"
-        android:layout_above="@+id/nextLagoon"
-        android:layout_toRightOf="@+id/actionsRemaining"
-        android:layout_toEndOf="@+id/actionsRemaining"
-        android:paddingTop="8sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Follow the water noises to the left"
-        android:id="@+id/nextLagoon"
-        android:clickable="true"
-        android:layout_alignBottom="@+id/imageView"
+        android:paddingTop="8sp"
+        android:layout_above="@+id/runIntoLagoon"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Follow the moaning off to the left"
-        android:id="@+id/followMoaning"
+        android:text="Follow the water noises to the left"
+        android:id="@+id/runIntoLagoon"
         android:clickable="true"
+        android:layout_above="@+id/pickUpShells"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/nextLagoon" />
+        android:layout_marginBottom="139dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Follow moaning plshldr)"
+        android:id="@+id/textView3"
+        android:layout_alignBottom="@+id/actionsRemaining"
+        android:layout_alignLeft="@+id/runIntoLagoon"
+        android:layout_alignStart="@+id/runIntoLagoon"
+        android:layout_alignTop="@+id/actionsRemaining" />
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Follow the moaning off to the left"-->
+        <!--android:id="@+id/followMoaning"-->
+        <!--android:clickable="true"-->
+        <!--android:layout_alignRight="@+id/nextLagoon"-->
+        <!--android:layout_alignEnd="@+id/nextLagoon"-->
+        <!--android:layout_marginBottom="110dp" />-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -66,8 +78,10 @@
         android:id="@+id/actionsRemaining"
         android:background="#4169E1"
         android:textColor="@android:color/white"
-        android:layout_marginTop="37dp"
-        android:layout_below="@+id/followMoaning"
+        android:layout_marginTop="57dp"
+        android:layout_alignTop="@+id/runIntoLagoon"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+
 </RelativeLayout>

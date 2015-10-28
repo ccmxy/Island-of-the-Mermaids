@@ -22,13 +22,13 @@ public class TwistyActivity extends AppCompatActivity {
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
-        mFollowMoaning = (TextView) findViewById(R.id.followMoaning);
-        mNextLagoon = (TextView) findViewById(R.id.nextLagoon);
+        mFollowMoaning = (TextView) findViewById(R.id.textView3);
+        mNextLagoon = (TextView) findViewById(R.id.runIntoLagoon);
 
         mNextLagoon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TwistyActivity.this, LagoonActivity.class);
+                Intent intent = new Intent(TwistyActivity.this, MermaidActivity.class);
                 startActivity(intent);
             }
         });

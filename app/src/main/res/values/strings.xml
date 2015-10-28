@@ -6,4 +6,5 @@
     <string name="title_activity_twisty">TwistyActivity</string>
     <string name="title_activity_lagoon">LagoonActivity</string>
     <string name="title_activity_dungeon">DungeonActivity</string>
+    <string name="title_activity_mermaid">MermaidActivity</string>
 </resources>

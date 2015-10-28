@@ -43,13 +43,18 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
+            android:name=".ui.DungeonActivity"
+            android:label="@string/title_activity_dungeon"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
             android:name=".ui.LagoonActivity"
             android:label="@string/title_activity_lagoon"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.DungeonActivity"
-            android:label="@string/title_activity_dungeon"
+            android:name=".ui.MermaidActivity"
+            android:label="@string/title_activity_mermaid"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>

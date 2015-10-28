@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mTakeItem = (TextView) findViewById(R.id.followMoaning);
-        mNextRoom = (TextView) findViewById(R.id.nextLagoon);
+        mTakeItem = (TextView) findViewById(R.id.pickUpShells);
+        mNextRoom = (TextView) findViewById(R.id.runIntoLagoon);
         mActionsRemaining = (TextView) findViewById(R.id.actionsRemaining);
         mPreferences = getApplicationContext().getSharedPreferences("TheAdventure", Context.MODE_PRIVATE);
 
