@@ -5,18 +5,23 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.colleenminor.theadventure.R;
+import com.example.colleenminor.theadventure.models.Item;
 import com.example.colleenminor.theadventure.models.User;
 
 public class MainActivity extends AppCompatActivity {
     private SharedPreferences mPreferences;
     private User mUser;
+    private TextView mTakeItem;
+    private TextView mNextRoom;
+    private int mChoice;
+    private SharedPreferences mPrefrefences;
 
 
     @Override
@@ -25,13 +30,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mTakeItem = (TextView) findViewById(R.id.takeItem);
+        mNextRoom = (TextView) findViewById(R.id.nextRoom);
+        mPreferences = getApplicationContext().getSharedPreferences("TheAdventure", Context.MODE_PRIVATE);
 
+        
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(MainActivity.this, ItemsListActivity.class);
+                startActivity(intent);
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
             }
         });
 
@@ -42,7 +53,19 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, NameActivity.class);
             startActivity(intent);
         }
+
+        mTakeItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Item item = new Item("candlestick", mUser);
+                item.save();
+            }
+        });
     }
+
+
+
+
 
     private boolean nameChosen() {
         String username = mPreferences.getString("username", null);

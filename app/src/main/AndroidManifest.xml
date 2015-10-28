@@ -24,8 +24,19 @@
             android:label="@string/title_activity_name"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <meta-data android:name="AA_DB_NAME" android:value="TheAdventure.db" />
-        <meta-data android:name="AA_DB_VERSION" android:value="1" />
+
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="TheAdventure.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="2" />
+
+        <activity
+            android:name=".ui.ItemsListActivity"
+            android:label="@string/title_activity_items_list"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
