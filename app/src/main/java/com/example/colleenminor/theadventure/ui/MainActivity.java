@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences mPreferences;
     private User mUser;
     private TextView mTakeItem;
+    private TextView mActionsRemaining;
+    private int mActions = 2;
     private TextView mNextRoom;
     private int mChoice;
     private SharedPreferences mPrefrefences;
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         mTakeItem = (TextView) findViewById(R.id.takeItem);
         mNextRoom = (TextView) findViewById(R.id.nextRoom);
+        mActionsRemaining = (TextView) findViewById(R.id.actionsRemaining);
         mPreferences = getApplicationContext().getSharedPreferences("TheAdventure", Context.MODE_PRIVATE);
 
 
@@ -57,14 +60,25 @@ public class MainActivity extends AppCompatActivity {
         mTakeItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Item item = new Item("candlestick", mUser);
                 item.save();
+                Toast.makeText(MainActivity.this, mUser.getName() + ", candlestick has been added to your inventory", Toast.LENGTH_LONG).show();
+                mActions--;
+                mActionsRemaining.setText("Actions remaining: " + String.valueOf(mActions));
+                mTakeItem.setVisibility(View.GONE);
             }
         });
+        /*
+        mNextRoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inten = new Intent(MainActivity.this, )
+
+            }
+
+        });
+        */
     }
-
-
 
 
 
@@ -86,7 +100,10 @@ public class MainActivity extends AppCompatActivity {
             mUser = new User(username);
             mUser.save();
         }
-        Toast.makeText(this, "Welcome " + mUser.getName(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Welcome " + mUser.getName() + "Welcome to the start of your great adventure!"
+                +"In this game, you will always be allowed to take up to 2 actions per turn. The number of actions that you have " +
+                "can be viewed by clicking the icon in the icon in the bottom left corner. " +
+                "You can view your item inventory any time by clicking the bottom right icon.", Toast.LENGTH_LONG).show();
 
     }
 }

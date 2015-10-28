@@ -45,8 +45,6 @@ public class ItemsListActivity extends AppCompatActivity {
         your_array_list.add("foo");
         your_array_list.add("bar");
 
-
-
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,

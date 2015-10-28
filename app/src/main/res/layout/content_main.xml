@@ -20,9 +20,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to the start of your great adventure!\nYou have just woekn up in this room and have no idea where you are."
+        android:text="You have just woken up in this room and have no idea where you are. The room is dimly lit and there is a candle next to you. You hear a strange noise coming from a room off the the left. "
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -31,17 +30,19 @@
         android:text="What do you do?"
         android:id="@+id/textView2"
         android:layout_alignBottom="@+id/imageView"
-        android:layout_centerHorizontal="true" />
+        android:layout_toRightOf="@+id/actionsRemaining"
+        android:layout_toEndOf="@+id/actionsRemaining"
+        android:layout_marginBottom="49dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go to next room"
         android:id="@+id/nextRoom"
-        android:layout_centerHorizontal="true"
         android:clickable="true"
-        android:layout_below="@+id/imageView"
-        android:layout_marginTop="6sp" />
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,4 +53,16 @@
         android:layout_centerHorizontal="true"
         android:clickable="true"
         android:layout_marginTop="6sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actions Remaning: 2"
+        android:id="@+id/actionsRemaining"
+        android:background="#4169E1"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/takeItem"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
