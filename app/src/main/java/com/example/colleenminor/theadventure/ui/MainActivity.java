@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         mNextRoom = (TextView) findViewById(R.id.nextRoom);
         mPreferences = getApplicationContext().getSharedPreferences("TheAdventure", Context.MODE_PRIVATE);
 
-        
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         mTakeItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Item item = new Item("candlestick", mUser);
                 item.save();
             }

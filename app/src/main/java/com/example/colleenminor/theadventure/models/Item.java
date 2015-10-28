@@ -22,19 +22,19 @@ public class Item extends Model {
         super();
     }
 
-    public String getmItem() {
+    public String getItem() {
         return mItem;
     }
 
-    public void setmItem(String mItem) {
+    public void setItem(String mItem) {
         this.mItem = mItem;
     }
 
-    public User getmUser() {
+    public User getUser() {
         return mUser;
     }
 
-    public void setmUser(User mUser) {
+    public void setUser(User mUser) {
         this.mUser = mUser;
     }
 
@@ -43,10 +43,13 @@ public class Item extends Model {
         mUser = user;
     }
 
-    public static List<Item> all() {
+    public static List<Item> all() { //maybe send user thru to onle get some...
         return new Select()
                 .from(Item.class)
                 .execute();
+//                .where("Name = ?", username)
+//        34	                .executeSingle();
+//        35
     }
 
 }
